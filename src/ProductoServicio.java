@@ -42,7 +42,7 @@ public class ProductoServicio {
         // String codigo="1000";
         String codigo = leer.nextLine();
 
-        boolean encontrados = false;
+        boolean encontrado = false;
 
         for (Producto producto : listaProductos) {
 
@@ -59,7 +59,7 @@ public class ProductoServicio {
                 // solicitar los datos para modificar un producto
                 // String marca = "Puma";
                 producto.setMarca(nuevaMarca);
-                encontrados = true;
+                encontrado = true;
                 break;
 
             }
@@ -68,9 +68,9 @@ public class ProductoServicio {
             // System.out.println("El producto no existe");
             // }
 
-            if (!encontrados) {
-                System.out.println("el producto no existe!!!!!!");
-            }
+        }
+        if (!encontrado) {
+            System.out.println("el producto no existe!!!!!!");
 
         }
 
