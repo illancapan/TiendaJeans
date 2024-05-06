@@ -17,7 +17,6 @@ public class Menu {
 
         System.out.println("Fin del metodo introMenu()");
 
-        leer.close();
     }
     public static void menu() throws Exception {
 
@@ -28,7 +27,8 @@ public class Menu {
             System.out.println("2: Agregar producto");
             System.out.println("3: Cargar datos productos");
             System.out.println("4: BUSCAR EDITAR PRODUCTO");
-            System.out.println("5: Salir");
+            System.out.println("5: LISTAR PRODUCTO");
+            System.out.println("6: Salir");
             int opc = leer.nextInt();// leer la opción del usuario
             switch (opc) {
                 case 1:
@@ -43,8 +43,12 @@ public class Menu {
                     cargarDatosProductos();
                     menu();
                     break;
-                    case 4:
+                case 4:
                     ProductoServicio.buscarEditarProducto();
+                    menu();
+                    break;
+                case 5:
+                    ArchivoServicio.exportarListaProductos();
                     menu();
                     break;
                 default:
